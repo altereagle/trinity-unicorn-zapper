@@ -1,1 +1,7 @@
-# trinity-unicorn-zapper
+# Trinity-Unicorn-Zapper
+
+## Team❦
+* Elle♥
+* Ava Caroline♥
+* Harper♥
+* Avery♥

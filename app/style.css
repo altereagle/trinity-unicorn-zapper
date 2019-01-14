@@ -1,0 +1,172 @@
+body {
+  cursor: none;
+  position: absolute;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -o-box-orient: vertical;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -o-box-pack: center;
+  justify-content: center;
+  -o-box-align: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px 0 rgba(0,0,0,0.65);
+}
+#cursor {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0) url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/160215/cursor.gif");
+  background-size: 40px 40px;
+}
+#debug {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-align: center;
+  background: rgba(255,255,255,0.25);
+  padding: 10px;
+  color: #000;
+}
+#player {
+  -o-box-flex: 1;
+  box-flex: 1;
+  flex: 0 0 auto;
+  align-self: center;
+  -ms-flex-item-align: center;
+}
+stats {
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -o-box-orient: vertical;
+  flex-flow: column;
+  min-width: 80px;
+}
+.bar {
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -o-box-align: center;
+  align-items: center;
+  -o-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  height: 5px;
+}
+name {
+  padding: 8px 0;
+  font-size: 10pt;
+  color: #12b8de;
+}
+healthbar {
+  padding: 2px 0;
+  background: #f00;
+}
+specialbar {
+  transition: all 0.1s ease-in;
+  padding: 2px 0;
+  background: #0064ff;
+}
+castingbar {
+  color: #de93f3;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 10pt;
+  padding: 15px 0;
+}
+.number {
+  font-size: 6pt;
+  letter-spacing: 2pt;
+  color: #ae93f3;
+}
+.looseSpecial {
+  -webkit-animation: decreaseBar 0.25s 1;
+  animation: decreaseBar 0.25s 1;
+}
+.flash {
+  -webkit-animation: flash 0.25s 1;
+  animation: flash 0.25s 1;
+}
+.zap {
+  position: absolute;
+  max-width: 100px;
+}
+@-webkit-keyframes flash {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    opacity: 0.05;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+    filter: alpha(opacity=5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes flash {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    opacity: 0.05;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+    filter: alpha(opacity=5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes decreaseBar {
+  0% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    color: rgba(0,0,0,0);
+  }
+  50% {
+    color: rgba(0,0,0,0);
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    background: #ff0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes decreaseBar {
+  0% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    color: rgba(0,0,0,0);
+  }
+  50% {
+    color: rgba(0,0,0,0);
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    background: #ff0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
